@@ -1,0 +1,15 @@
+# Не добавлять оригинальные выгрузки и рабочий Power BI-файл
+*.pbix
+*.pbit
+*.xlsx
+*.xls
+*.csv
+*.parquet
+*.zip
+
+# Секреты и локальные артефакты
+.env
+.env.*
+.DS_Store
+*credentials*
+*secrets*

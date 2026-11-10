@@ -1,0 +1,25 @@
+-- Прочитано в Power BI Desktop. Это вычисляемые таблицы, не меры.
+
+matrices =
+SUMMARIZE(
+    'matrix',
+    'matrix'[id]
+)
+
+calend =
+SUMMARIZE(
+    UNION(
+        SUMMARIZE(
+            'plan_new_visits',
+            'plan_new_visits'[месяц],
+            'plan_new_visits'[год]
+        ),
+        SUMMARIZE(
+            OSA_all,
+            OSA_all[Month],
+            OSA_all[Year]
+        )
+    ),
+    plan_new_visits[месяц],
+    plan_new_visits[год]
+)

@@ -1,0 +1,43 @@
+graph LR
+    Stores["analytics_all_ap<br/>торговые точки / BG"]
+    SKU["sku<br/>SKU"]
+    Calendar["calend<br/>месяц / сортировка"]
+    Matrices["matrices<br/>ID матриц"]
+    Status["актуальные статусы ТТ<br/>(название обрезано)"]
+
+    DMP["DMP"]
+    Facing["facing"]
+    Fact["fact"]
+    Matrix["matrix"]
+    OSA["OSA_YYYY_MM"]
+    OSAAll["OSA_all"]
+    Plan["plan"]
+    VisitsPlan["plan_new_visits"]
+    ReportSKU["report_sku"]
+    Reports["reports"]
+    Response["response"]
+    ShelfPlan["Доля план new"]
+
+    Stores --> DMP
+    Calendar --> DMP
+    Stores --> Facing
+    SKU --> Facing
+    Calendar --> Facing
+    Status --> Fact
+    Matrices --> Matrix
+    SKU --> Matrix
+    SKU --> OSA
+    Calendar --> OSAAll
+    Stores --> OSAAll
+    Status --> Plan
+    Stores --> VisitsPlan
+    Calendar --> VisitsPlan
+    Stores --> ReportSKU
+    Calendar --> ReportSKU
+    Matrices --> Reports
+    Status --> Reports
+    Stores --> Reports
+    Stores --> Response
+    Fact --> Response
+    Stores --> ShelfPlan
+    Calendar --> ShelfPlan
